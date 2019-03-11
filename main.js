@@ -1,13 +1,17 @@
 var p1Button = document.getElementById("p1");
 var p2Button = document.getElementById("p2");
 var resetButton = document.getElementById("reset");
+var numInput = document.querySelector("input");
 var p1Score=0;
 var P2Score=0;
-var TotalScore = document.getElementById("choosenNumber");  
-var gameOver=false; 
+var TotalScore = Number(numInput.value);
+var p= document.querySelector("p");
+var totalDispllay = document.querySelector("p span");
+playingto =0;
+
 
 p1Button.addEventListener("click",function()
-{   if(p1Score<5)
+{   if(p1Score<TotalScore)
     {
         p1Score++;
         document.getElementById("firstPlayerH1").innerHTML=p1Score;
@@ -21,7 +25,7 @@ p1Button.addEventListener("click",function()
    
 });
 p2Button.addEventListener("click",function()
-{   if(P2Score<5)
+{   if(P2Score<TotalScore)
     {
         P2Score++;
         document.getElementById("secondPlayerH1").innerHTML=P2Score;    
@@ -37,5 +41,13 @@ resetButton.addEventListener("click",function()
     p1Score=0;
     P2Score=0;
     document.getElementById("firstPlayerH1").innerHTML=p1Score;
-    document.getElementById("secondPlayerH1").innerHTML=P2Score;    
+    document.getElementById("secondPlayerH1").innerHTML=P2Score; 
+      
+
+});
+
+numInput.addEventListener("change",function()
+{
+   totalDispllay.innerHTML= numInput.value;
+   TotalScore=Number(numInput.value);
 });
