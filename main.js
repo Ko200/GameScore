@@ -10,7 +10,7 @@ var totalDispllay = document.querySelector("p span");
 playingto =0;
 
 
-p1Button.addEventListener("touchstart",function()
+p1Button.addEventListener("click",function()
 {   if(p1Score<TotalScore)
     {
         p1Score++;
@@ -24,8 +24,7 @@ p1Button.addEventListener("touchstart",function()
 
    
 });
-p2Button.addEventListener("touchstart
-                          ",function()
+p2Button.addEventListener("click",function()
 {   if(P2Score<TotalScore)
     {
         P2Score++;
