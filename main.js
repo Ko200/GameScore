@@ -38,16 +38,20 @@ p2Button.addEventListener("click",function()
 });
 resetButton.addEventListener("click",function()
 {   
+    reset();
+});
+
+function reset()
+{
     p1Score=0;
     P2Score=0;
-    document.getElementById("firstPlayerH1").innerHTML=p1Score;
-    document.getElementById("secondPlayerH1").innerHTML=P2Score; 
-      
-
-});
+    document.getElementById("firstPlayerH1").innerHTML=0;
+    document.getElementById("secondPlayerH1").innerHTML=0; 
+}
 
 numInput.addEventListener("change",function()
 {
    totalDispllay.innerHTML= numInput.value;
    TotalScore=Number(numInput.value);
+   reset();
 });
