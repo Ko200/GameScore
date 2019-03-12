@@ -1,4 +1,10 @@
-.totalScore
+.scrhead
 {
-    color: green;
+    font-family: 'Cabin Sketch', cursive;
+}
+input[type=number]
+{
+    border-radius: 20px;
+    border: 1px solid rebeccapurple;
+    text-align: center;
 }
